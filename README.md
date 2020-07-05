@@ -20,10 +20,10 @@ Sub 404 uses subdomains list from text file and checks for url of <b>404 Not Fou
 ## How to use:
 <b>Note: Only works on Python3.7+</b>
 
-- git clone https://github.com/r3curs1v3-pr0xy/sub404.git
+- git clone https://github.com/r3curs1v3-pr0xy/sub404
 - Install dependencies: pip install -r requirements.txt
-- Install ![Subfinder](https://github.com/projectdiscovery/subfinder) (optional)
-- Install ![Sublist3r](https://github.com/aboul3la/Sublist3r) (optional)
+- Install [Subfinder](https://github.com/projectdiscovery/subfinder) (optional)
+- Install [Sublist3r](https://github.com/aboul3la/Sublist3r) (optional)
 - python3 sub404.py -h 
 
 ## Usage example:
@@ -59,17 +59,17 @@ This will display help for the tool. Here are all the switches it supports.
 This tool fetches CNAME of 404 response code URL and removes all URL which have target domain in CNAME. So chances of false positives are high.
 ```
 
-## Contributing to Sub404:
+## Contributing to Sub 404:
 ```
 - Report bugs, missing best practices
 - DM me with new ideas
 - Help in Fixing bugs
 ```
 ## My Instagram:
-<b>Say Hello ![r3curs1v3_pr0xy](https://www.instagram.com/r3curs1v3_pr0xy/)
+<b>Say Hello [r3curs1v3_pr0xy](https://www.instagram.com/r3curs1v3_pr0xy/)
 
 ## Credits:
-![Ice3man543](https://github.com/Ice3man543) - Projectdiscovery's subfinder tool is used to enumerate subdomains<br>
-![aboul3la](https://github.com/aboul3la) - aboul3la's sublist3r tool is used to enumerate subdomains
+[Ice3man543](https://github.com/Ice3man543) - Projectdiscovery's subfinder tool is used to enumerate subdomains<br>
+[aboul3la](https://github.com/aboul3la) - aboul3la's sublist3r tool is used to enumerate subdomains
 
 ## Current version is 1.0
