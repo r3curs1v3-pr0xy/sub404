@@ -258,11 +258,6 @@ def main():
 
         else:
             pass
-        if args.output:
-            print('\033[91m[!] Don\'t use -o with this option ')
-            sys.exit()
-        else:
-            pass
 
         getResponseCode(args.file)
 
