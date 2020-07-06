@@ -1,0 +1,5 @@
+argparse
+dnspython
+time
+asyncio
+aiohttp
