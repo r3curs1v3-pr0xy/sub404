@@ -20,7 +20,7 @@ Sub 404 uses subdomains list from text file and checks for url of <b>404 Not Fou
 ## How to use:
 <b>Note: Only works on Python3.7+</b>
 
-- git clone https://github.com/r3curs1v3-pr0xy/sub404
+- git clone https://github.com/r3curs1v3-pr0xy/sub404.git
 - Install dependencies: pip install -r requirements.txt
 - Install [Subfinder](https://github.com/projectdiscovery/subfinder) (optional)
 - Install [Sublist3r](https://github.com/aboul3la/Sublist3r) (optional)
