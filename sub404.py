@@ -132,6 +132,12 @@ def main():
         except OSError as e:
             print('\033[96m[!] Subfinder not found\033[91m !!!\n\033[93m[-] Install it or use -f with subdomain.txt file.')
             sys.exit()
+            
+        if os.path.isfile('sublist3r_list.txt'):
+            pass
+        else:
+            fpa = open("sublist3r_list.txt", "w")
+            fpa.close()
 
         lines1 = open("sublist3r_list.txt", "r").readlines()
         lines2 = open('subfinder_list.txt', 'r').readlines()
