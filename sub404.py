@@ -168,7 +168,10 @@ def main():
         # To store unique subdomain in Text file
         with open(args.output, 'w') as fp:
             for x in uniqueDomain:
-                fp.write(x+"\n")
+                if 'http://' or 'https://' in x:
+                    r = x.replace("https://", "")
+                    r = r.replace("http://", "")
+                    fp.write(r+"\n")
             fp.close()
         with Spinner():
             asyncio.run(getCode())
