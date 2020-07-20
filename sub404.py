@@ -210,11 +210,11 @@ def main():
         subdomain = data.readlines()
 
         for line in subdomain:
-            if 'http://' and 'https://' not in line:
-                inputURL.append(args.protocol+"://"+line.strip())
-
-            else:
+            if 'http://' or 'https://' in line:
                 inputURL.append(line.strip())
+                
+            else:
+                inputURL.append(args.protocol+"://"+line.strip())
 
         with Spinner():
             asyncio.run(urlCode())
