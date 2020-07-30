@@ -1,5 +1,5 @@
 argparse
 dnspython
-time
+times
 asyncio
 aiohttp
