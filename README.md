@@ -26,6 +26,13 @@ Sub 404 uses subdomains list from text file and checks for url of <b>404 Not Fou
 - Install [Sublist3r](https://github.com/aboul3la/Sublist3r) (optional)
 - python3 sub404.py -h 
 
+### Using docker
+As an alternative, it is also possible to build a Docker image, so no prerequisites are necessary.
+```
+$ docker build -t sub404 .
+$ docker run --rm sub404 -h
+```
+
 ## Usage example:
 
 <b>Note: If subfinder and sublist3r is intalled.</b><br>
