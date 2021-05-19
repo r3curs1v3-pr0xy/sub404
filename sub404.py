@@ -3,6 +3,7 @@ import os
 import sys
 import threading
 import subprocess
+from distutils.spawn import find_executable
 
 if sys.platform.startswith('win'):
     os.system('cls')
@@ -103,40 +104,16 @@ def main():
 
     # Open Sublist3r and Sunfinder to extract all subdomains
     def getSubdomain(subData):
+        print('\033[92m[-] Default http [use -p https]')
+        print('\033[92m[-] Gathering Information...')
+        time.sleep(2)
 
-        try:
-            stdout_string = subprocess.check_output(['subfinder', '-silent', '-version'], stderr=subprocess.STDOUT)
-
-            try:
-                stdout_string = subprocess.check_output(['sublist3r'], stderr=subprocess.STDOUT)
-                print('\033[92m[-] Default http [use -p https]')
-                print('\033[92m[-] Gathering Information...')
-                time.sleep(2)
-
-                print('\033[96m[-] Enumerating subdomains for '+'\033[94m'+args.domain)
-                with Spinner():
-                    os.popen('sublist3r -d '+subData+' -o sublist3r_list.txt').read()
-                    os.popen('subfinder -t 15 -d  '+subData+' -silent > subfinder_list.txt').read()
-
-            except subprocess.CalledProcessError as cpe:
-                print('\033[96m[!] Sublist3r not found\033[91m !!!\n\033[93m[-] Install it or use -f with subdomain.txt file.')
-                sys.exit()
-
-            except OSError as e:
-                print('\033[96m[!] Sublist3r not found\033[91m !!!\n\033[93m[-] Install it or use -f with subdomain.txt file.')
-                sys.exit()
-
-        except subprocess.CalledProcessError as cpe:
-            print('\033[96m[!] Subfinder not found\033[91m !!!\n\033[93m[-] Install it or use -f with subdomain.txt file.')
-            sys.exit()
-
-        except OSError as e:
-            print('\033[96m[!] Subfinder not found\033[91m !!!\n\033[93m[-] Install it or use -f with subdomain.txt file.')
-            sys.exit()
+        print('\033[96m[-] Enumerating subdomains for '+'\033[94m'+args.domain)
+        with Spinner():
+            os.popen('sublist3r -d '+subData+' -o sublist3r_list.txt').read()
+            os.popen('subfinder -t 15 -d  '+subData+' -silent > subfinder_list.txt').read()
             
-        if os.path.isfile('sublist3r_list.txt'):
-            pass
-        else:
+        if not os.path.isfile('sublist3r_list.txt'):
             fpa = open("sublist3r_list.txt", "w")
             fpa.close()
 
@@ -366,5 +343,12 @@ async def gen_tasks(session, url_list):
     time.sleep(1)
     return result
 
+def check_tools(*args):
+    for cmd in args:
+        if not find_executable(cmd):
+            print(f"Installing [{cmd}]...")
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', cmd], stdout=subprocess.DEVNULL)
+
 if __name__ == "__main__":
+    check_tools("subfinder","sublist3r")
     main()
