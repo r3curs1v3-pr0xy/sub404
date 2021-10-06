@@ -72,8 +72,8 @@ This tool fetches CNAME of 404 response code URL and removes all URL which have 
 - DM me with new ideas
 - Help in Fixing bugs
 ```
-## My Instagram:
-<b>Say Hello [r3curs1v3_pr0xy](https://www.instagram.com/r3curs1v3_pr0xy/)
+## My Twitter:
+<b>Say Hello [r3curs1v3_pr0xy](https://twitter.com/r3curs1v3_pr0xy/)
 
 ## Credits:
 [Ice3man543](https://github.com/Ice3man543) - Projectdiscovery's subfinder tool is used to enumerate subdomains<br>
