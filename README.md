@@ -12,8 +12,8 @@ Sub 404 uses subdomains list from text file and checks for url of <b>404 Not Fou
 
 ## Key Features:
 ```
-- Fast( as it is Asynchronous)
-- Uses two more tool to increase efficiency
+- Fast (as it is asynchronous)
+- Uses two more tools to increase efficiency
 - Saves result in a text file for future reference
 - Umm thats it, nothing much !
 ```
