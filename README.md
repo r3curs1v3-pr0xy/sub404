@@ -2,7 +2,7 @@
 ![Banner](https://github.com/r3curs1v3-pr0xy/sub404/blob/master/banner.png)
 
 ## What is Sub 404
-Sub 404 is a tool written in python which is used to check possibility of subdomain takeover vulnerabilty and it is fast as it is Asynchronous.
+Sub 404 is a tool written in python which is used to check possibility of subdomain takeover vulnerability and it is fast as it is asynchronous.
 
 ## Why
 During recon process you might get a lot of subdomains(e.g more than 10k). It is not possible to test each manually or with traditional requests or urllib method as it is very slow. Using <b>Sub 404</b> you can automate this task in much faster way. Sub 404 uses <b>aiohttp/asyncio</b> which makes this tool asynchronous and faster.
@@ -12,8 +12,8 @@ Sub 404 uses subdomains list from text file and checks for url of <b>404 Not Fou
 
 ## Key Features:
 ```
-- Fast( as it is Asynchronous)
-- Uses two more tool to increase efficiency
+- Fast (as it is asynchronous)
+- Uses two more tools to increase efficiency
 - Saves result in a text file for future reference
 - Umm thats it, nothing much !
 ```
@@ -35,13 +35,13 @@ $ docker run --rm sub404 -h
 
 ## Usage example:
 
-<b>Note: If subfinder and sublist3r is intalled.</b><br>
+<b>Note: If subfinder and sublist3r is installed.</b><br>
 This combines result from sublist3r and subfinder tool and checks for possibility of takeover.<br>
 <code>$ python3 sub404.py -d anydomain.com</code>
 
 ![Example](https://github.com/r3curs1v3-pr0xy/sub404/blob/master/example1.png)
 <br><br><br>
-<b> - If subfinder and sublist3r is not intalled, provide subdomains in text file</b><br>
+<b> - If subfinder and sublist3r is not installed, provide subdomains in text file</b><br>
 <code>$ python3 sub404.py -f subdomain.txt</code><br><br>
 ![Example](https://github.com/r3curs1v3-pr0xy/sub404/blob/master/example.png)
 ## Note:
